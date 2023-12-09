@@ -1,30 +1,21 @@
 import './App.css';
-import Navbar from './componentes/section/Navbar';
-import Footer from './componentes/section/Footer';
-import Presentation from './componentes/section/Presentation';
-import Project from './componentes/section/Projects';
-import Skills from './componentes/section/Skills';
+import Navbar from './componentes/Navbar';
+import Footer from './componentes/Footer';
+import Presentation from './componentes/Presentation';
+import Project from './componentes/Projects';
+import Skills from './componentes/Skills';
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <Presentation></Presentation>
-      <br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/>
-      <Skills></Skills>
-      <br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/>
-      <Project></Project>
-      <br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/>
+      <Navbar/>
+      <Presentation/>
+      
+      <Skills/>
+      
+      <Project/>
+
       <Footer></Footer>
     </div>
   );
