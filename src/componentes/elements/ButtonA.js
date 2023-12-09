@@ -1,8 +1,12 @@
-import styles from './'
+import styles from './ButtonA.module.css'
 
-function ButtonA(){
+function ButtonA({text}){
     return(
-        <div></div>
+        <div>
+            <buttun className={styles.btn}>
+                {text}
+            </buttun>
+        </div>
     )
 }
 

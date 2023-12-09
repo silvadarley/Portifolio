@@ -1,8 +1,12 @@
+import styles from './ButtonB.module.css'
 
-
-function ButtonB(){
+function ButtonB({text}){
     return(
-        <div></div>
+        <div>
+            <buttun className={styles.btn}>
+                {text}
+            </buttun>
+        </div>
     )
 }
 

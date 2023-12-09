@@ -1,4 +1,7 @@
-import styles from './Presentation.module.css'
+import styles from './Presentation.module.css';
+import ButtonA from '../elements/ButtonA';
+import ButtonB from '../elements/ButtonB';
+
 
 function Presentation(){
     return(
@@ -65,18 +68,13 @@ function Presentation(){
             Estou aberto a novas oportunidades e ansioso para enfrentar os próximos desafios que me aguardam. <br/>
             Obrigado por conhecer um pouco sobre mim!
             </p>
+
+            <ButtonA text="Botão A"/>
+            <br/><br/><br/><br/>
+            <ButtonB text="Botão B"/>
+
         </div>
     )
 }
 
 export default Presentation
-
-// function Project(){
-//     return(
-//         <div id="Project">
-//             <h1>Texto de teste project</h1>
-//         </div>
-//     )
-// }
-
-// export default Project
