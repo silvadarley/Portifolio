@@ -10,3 +10,8 @@
 .Presentation h4{
     font-size: 20px;
 }
+
+.Presentation p{
+    text-align: start !important;
+    
+}
