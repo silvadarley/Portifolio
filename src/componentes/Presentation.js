@@ -1,8 +1,8 @@
-import styles from './Presentatio.modules.css'
+import styles from './Presentation.module.css'
 
 function Presentation(){
     return(
-        <div>
+        <div className={styles.Presentation}>
             <p>
                 <strong>Bem-vindo ao meu portifolio!</strong>
             </p>
@@ -17,3 +17,13 @@ function Presentation(){
 }
 
 export default Presentation
+
+// function Project(){
+//     return(
+//         <div id="Project">
+//             <h1>Texto de teste project</h1>
+//         </div>
+//     )
+// }
+
+// export default Project
