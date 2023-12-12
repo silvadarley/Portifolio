@@ -9,6 +9,7 @@ body {
   /* background-repeat: no-repeat; */
   color: aliceblue;
   object-fit: cover;
+  background-size: 100%;
 }
 
 code {

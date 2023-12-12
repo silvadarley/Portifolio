@@ -69,7 +69,8 @@ function Presentation(){
             Obrigado por conhecer um pouco sobre mim!
             </p>
 
-            <ButtonA text="Botão A"/>
+            <ButtonA link={ `https://www.linkedin.com/in/darleysilva/`}
+                text='Conecte-se comigo!'/>
             <br/><br/><br/><br/>
             <ButtonB text="Botão B"/>
 
