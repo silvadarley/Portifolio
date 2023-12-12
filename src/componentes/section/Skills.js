@@ -6,7 +6,8 @@ import react from '../../Imagens/Skills/react.svg';
 import typeScript from '../../Imagens/Skills/typeScrypt.svg';
 import cSharp from '../../Imagens/Skills/C_Sharp_Icon.png';
 import oracle from '../../Imagens/Skills/oracle.png';
-import sqlserver from '../../Imagens/Skills/sqlserver.webp';
+import sqlserver from '../../Imagens/Skills/sql-server.png';
+import MySql from '../../Imagens/Skills/Mysql.png';
 
 function Skills(){
     return(
@@ -54,6 +55,11 @@ function Skills(){
                 <div className={style.tooltip}>
                     <img className={style.img} src={sqlserver}/>
                     <span className={style.tooltiptext}>Sql Server</span>
+                </div>
+
+                <div className={style.tooltip}>
+                    <img className={style.img} src={MySql}/>
+                    <span className={style.tooltiptext}>MySql</span>
                 </div>
                 
             </div>
