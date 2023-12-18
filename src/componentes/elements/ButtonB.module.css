@@ -1,12 +1,13 @@
 .btn{
     background: transparent;
-    color: #74FAC0;
+    color: #ffffff;
     text-align: center;
-    border: 2px solid #74FAC0;
+    border: 2px solid #ffffff;
     padding: 10px;
     border-radius: 10px;
     font-weight: bolder;
     margin-top: 15px;
+    margin-bottom: 30px;
     cursor: pointer;
 }
 

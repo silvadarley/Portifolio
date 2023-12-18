@@ -33,7 +33,7 @@ function Navbar(){
                 </li>
 
                 <li>
-                    <a target='_blank' href='https://www.linkedin.com/in/darleysilva/'>
+                    <a target='_blank' rel="noreferrer" href='https://www.linkedin.com/in/darleysilva/'>
                         <FaLinkedin size={30}/>
                     </a>
                 </li>

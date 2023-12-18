@@ -1,6 +1,5 @@
 import styles from './Presentation.module.css';
 import ButtonA from '../elements/ButtonA';
-import ButtonB from '../elements/ButtonB';
 
 
 function Presentation(){
@@ -20,7 +19,7 @@ function Presentation(){
 
             <p>
             Minha jornada profissional começou na empresa Soft-Box, onde tive a oportunidade de <br/>
-            trabalhar como analista de sistemas por 11 meses. Lá, adquiri habilidades valiosas e <br/>
+            trabalhar como analista de suporte por 11 meses. Lá, adquiri habilidades valiosas e <br/>
             pude aplicar meus conhecimentos na análise de requisitos para o desenvolvimento de um <br/>
             sistema de controle de frota e organização de rotas para chamados de carros. Além disso, <br/>
             pude contribuir com a modelagem de uma base de dados relacional e escrever scripts SQL <br/>
@@ -69,10 +68,9 @@ function Presentation(){
             Obrigado por conhecer um pouco sobre mim!
             </p>
 
-            <ButtonA link={ `https://www.linkedin.com/in/darleysilva/`}
+            <ButtonA link={`https://www.linkedin.com/in/darleysilva/`}
                 text='Conecte-se comigo!'/>
-            <br/><br/><br/><br/>
-            <ButtonB text="Botão B"/>
+
 
         </div>
     )

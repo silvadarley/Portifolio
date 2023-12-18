@@ -3,7 +3,7 @@ import styles from './ButtonB.module.css'
 function ButtonB({text, link}){
     return(
         <div>
-            <a href={link}>
+            <a target='_blank' rel="noreferrer" href={link}>
                 <buttun className={styles.btn}>
                     {text}
                 </buttun>
