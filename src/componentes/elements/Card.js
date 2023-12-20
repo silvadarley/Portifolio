@@ -1,23 +1,37 @@
-import styles from './Card.module.css'
+import styles from './Card.module.css';
 import ButtonB from './ButtonB';
 
 
-function Card({imagem, url, tecnologia, descricao}){
+function Card({imagem, title, site, tecnologia, descricao, repositorio}){
     return(
         <div className={styles.card}>
-            <img src={imagem}></img>
+            <a 
+                target='_blank' 
+                rel="noreferrer" 
+                href={site}
+            >
+                <img src={imagem} alt='Error'></img>
+            </a>
 
             <section>
-                <h2>Titulo</h2>
+                <h2>Titulo: {title}</h2>
                 <p>
                     Tecnologia: 
-                    <p>{tecnologia}</p>
-                </p>
-                <p>Descrição: 
-                    <br/>{descricao}
+                    <br/>
+                    {tecnologia}
                 </p>
 
-                <ButtonB text='Acesse o projeto aqui!' link={url}/>
+                <p> 
+                    Descrição:
+                    <br/>
+                    {descricao}
+                </p>
+
+                <ButtonB 
+                    text='Acesse meu projeto aqui!' 
+                    link={repositorio}
+                />
+
             </section>
         </div>
     )
