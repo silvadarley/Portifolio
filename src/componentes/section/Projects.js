@@ -2,8 +2,8 @@ import ButtonB from '../elements/ButtonB';
 import styles from './Projects.module.css'
 import Card from '../elements/Card';
 
-import Carousel from 'react-bootstrap/Carousel';
-import ExampleCarouselImage from 'components/ExampleCarouselImage';
+// import Carousel from 'react-bootstrap/Carousel';
+// import ExampleCarouselImage from 'components/ExampleCarouselImage';
 
 import ccxp from '../../Imagens/Cards/ccxp.png';
 import arquitetura from '../../Imagens/Cards/Arquitetura.png'
@@ -53,7 +53,7 @@ function Project(){
 
             <br/>
 
-            <Carousel>
+            {/* <Carousel>
                 <Carousel.Item interval={1000}>
                     
                     <ExampleCarouselImage text="First slide" />
@@ -83,7 +83,7 @@ function Project(){
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
-            </Carousel>
+            </Carousel> */}
 
     <br/>
 
