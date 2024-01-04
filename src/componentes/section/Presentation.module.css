@@ -12,6 +12,8 @@
 }
 
 .Presentation p{
-    text-align: start !important;
-    
+    /* text-align: start !important; */
+    text-align: justify;
+    word-wrap: break-word;
+    max-width: 85%;
 }

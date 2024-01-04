@@ -1,70 +1,109 @@
 import styles from './Presentation.module.css';
 import ButtonA from '../elements/ButtonA';
+import {useEffect, useState} from 'react';
 
 
 function Presentation(){
+
+    const dataAtual = new Date();
+    const dataNascimento = new Date('1987-01-22');
+    // Calculando a diferença de anos
+    const diferencaAnos = dataAtual.getFullYear() - dataNascimento.getFullYear();
+
+    // Verificando se o aniversário já ocorreu este ano
+    const aniversarioOcorreu = (
+        dataAtual.getMonth() > dataNascimento.getMonth() ||
+        (
+            dataAtual.getMonth() === dataNascimento.getMonth() && 
+            dataAtual.getDate() >= dataNascimento.getDate()
+        )
+    );
+
+    // A idade é o ano atual menos o ano de nascimento, ajustado para o aniversário
+    const idade = aniversarioOcorreu ? diferencaAnos : diferencaAnos - 1;
+
+
+
+    const [text, setText] = useState('');
+    const toRotate = [`Me chamo Darley Silva e tenho ${idade} anos.`,'E sou Desnvolvedor full-stack', 'Conheça um pouco mais sobre minha história profissional!'];
+    const [loop, setLoop] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
+    const period = 80;
+    const [delta, setDelta] = useState(100);
+
+    useEffect(()=>{
+        let relogio = setInterval(()=>{
+            toType()
+        }, delta)
+        return()=> {clearInterval(relogio)}
+    }, [text])
+
+    const toType = ()=>{
+        let i = loop % toRotate.length;
+        let fullText = toRotate[i];
+        let updateText = isDeleting ? fullText.substring(0,text.length-1) : fullText.substring(0,text.length+1);
+
+        setText(updateText);
+
+        if(!isDeleting &&updateText === fullText){
+            setIsDeleting(true);
+            setDelta(period);
+        }else if (isDeleting && updateText === ''){
+            setIsDeleting(false);
+            setDelta(period);
+            setLoop(loop+1);
+        }
+    }
+
     return(
         <div className={styles.Presentation}>
             <h4>
                 <strong>Bem-vindo ao meu portifolio!</strong>
             </h4>
 
-            <h1>Olá! Me chamo Darley e tenho 36 anos. </h1>
+            {/* <h1>Olá! Me chamo Darley e tenho 36 anos. </h1> */}
+            <h1>Olá! {text} </h1>
 
             <p>
-            Sou pai de dois filhos maravilhosos e sou apaixonado pelo mundo da tecnologia. <br/>
-            Formei-me como analista de sistemas pela Universidade UNIPAC e desde então tenho <br/>
-            construído uma carreira sólida nessa área fascinante.
+            Sou pai de dois filhos maravilhosos e sou apaixonado pelo mundo da tecnologia. 
+            Formei-me em analise e desenvolimento de sistemas pela Universidade UNIPAC e 
+            desde então tenho construído uma carreira sólida nessa área fascinante.
             </p>
 
             <p>
-            Minha jornada profissional começou na empresa Soft-Box, onde tive a oportunidade de <br/>
-            trabalhar como analista de suporte por 11 meses. Lá, adquiri habilidades valiosas e <br/>
-            pude aplicar meus conhecimentos na análise de requisitos para o desenvolvimento de um <br/>
-            sistema de controle de frota e organização de rotas para chamados de carros. Além disso, <br/>
-            pude contribuir com a modelagem de uma base de dados relacional e escrever scripts SQL <br/>
-            para o sistema de frota, utilizando a tecnologia Oracle 11G. Também fui responsável pelo <br/>
-            desenvolvimento parcial da aplicação em C#, o que me permitiu aprimorar minhas habilidades <br/>
-            de programação.
+            Iniciei minha jornada profissional como analista de suporte na empresa Soft-Box, 
+            onde era responsável por garantir a disponibilidade das aplicações de sistemas, 
+            como emissão de nota fiscal, carta de conhecimento de transporte, entre outros, 
+            utilizando monitoramento Nagios, por 11 meses, durante esse período, adquiri 
+            habilidades valiosas para trilhar o meu caminho profissional.
             </p>
 
             <p>
-            Há mais de 9 anos, tenho tido a honra de fazer parte da equipe da Secretaria de Saúde <br/>
-            do município de Uberlândia. Durante esse período, assumi diversas responsabilidades e <br/>
-            desempenhei um papel fundamental em projetos importantes. Entre as atividades que realizei, <br/>
-            destaco a implantação de sistemas de RH, Folha de pagamento, contábil e compras, bem como <br/>
-            a migração de uma base de dados do SQL Server para o Postgre. Também fui responsável por <br/>
-            implantar um sistema de chamados para clientes internos, utilizando o GLPI, o que trouxe <br/>
-            maior agilidade e organização aos atendimentos. Além disso, prestei suporte e manutenção em <br/>
-            redes de computadores, controlei o licenciamento de softwares e implantei um sistema mobile <br/>
-            para o registro de atendimento de visitas de profissionais da saúde em atenção primária, o <br/>
-            que otimizou e aprimorou o trabalho diário desses profissionais. Também atuei no suporte de <br/>
-            um sistema de prontuário eletrônico, auxiliando na detecção de erros e problemas, garantindo <br/>
-            seu uso eficiente e adequado.
+            Há mais de 9 anos, integro a equipe da Secretaria de Saúde do município de Uberlândia. 
+            Iniciei minhas atividades em abril de 2014, assumindo diversas responsabilidades, incluindo 
+            a aplicação dos meus conhecimentos na análise de requisitos para o desenvolvimento de um 
+            sistema de controle de frota e organização de rotas para chamados de carros. Nesse contexto, 
+            contribuí ativamente para a modelagem de uma base de dados relacional, escrevi scripts SQL 
+            para aprimorar o sistema de frota, utilizando a tecnologia Oracle 11G, e fui responsável 
+            pelo desenvolvimento parcial da aplicação em C#, o que resultou no aprimoramento das minhas 
+            habilidades de programação.
             </p>
 
             <p>
-            Ao longo dessa trajetória profissional, adquiri habilidades sólidas em análise de requisitos, <br/>
-            modelagem de dados, desenvolvimento de aplicativos, administração de sistemas e suporte técnico. <br/>
-            A cada novo desafio, sinto-me motivado a aprender mais e aprimorar minhas habilidades. <br/>
-            Estou sempre em busca de novas oportunidades para contribuir para o avanço da tecnologia e para <br/>
-            a eficiência das organizações.
+            Durante esse período, desempenhei um papel fundamental em projetos importantes, inicialmente 
+            concentrando meus esforços no desenvolvimento de aplicações voltadas para a melhoria da qualidade 
+            no atendimento da saúde. Minhas responsabilidades abrangeram análise de requisitos, modelagem, 
+            desenvolvimento e migração de base de dados. Destaco minha participação na análise da base de 
+            dados de uma ferramenta fornecida pelo Ministério da Saúde, utilizada para o registro de pacientes 
+            na rede de atenção primária. Nesse contexto, elaborei relatórios que atendiam às necessidades da 
+            Secretaria, proporcionando uma apresentação eficiente e qualitativa dos dados de atendimento de 
+            pacientes. Essa experiência fortaleceu minha trajetória profissional, consolidando habilidades em 
+            diferentes áreas da tecnologia da informação e contribuindo para o avanço e eficiência da organização.
             </p>
 
             <p>
-            Além da minha paixão pela área de TI, também tenho diversos interesses e hobbies. Nos meus <br/>
-            momentos de lazer, gosto de praticar esportes, ouvir música e viajar.
-            </p>
-
-            <p>
-            Estou entusiasmado com o futuro e as possibilidades que ele reserva. Quero continuar crescendo <br/>
-            profissionalmente e aplicar meus conhecimentos e experiências para contribuir de forma significativa <br/>
-            no desenvolvimento de soluções tecnológicas inovadoras. 
-            </p>
-
-            <p>
-            Espero ter a oportunidade de compartilhar minha expertise e colaborar em projetos desafiadores. <br/>
-            Estou aberto a novas oportunidades e ansioso para enfrentar os próximos desafios que me aguardam. <br/>
+            Espero ter a oportunidade de compartilhar minha expertise e colaborar em projetos desafiadores. 
+            Estou aberto a novas oportunidades e ansioso para enfrentar os próximos desafios que me aguardam. 
             Obrigado por conhecer um pouco sobre mim!
             </p>
 
