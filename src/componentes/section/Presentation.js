@@ -1,6 +1,7 @@
 import styles from './Presentation.module.css';
 import ButtonA from '../elements/ButtonA';
 import {useEffect, useState} from 'react';
+import foto from '../../Imagens/Fotos/darleyRosto.png';
 
 
 function Presentation(){
@@ -28,7 +29,7 @@ function Presentation(){
     const toRotate = [`Me chamo Darley Silva e tenho ${idade} anos.`,'E sou Desnvolvedor full-stack', 'Conheça um pouco mais sobre minha história profissional!'];
     const [loop, setLoop] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const period = 80;
+    const period = 130;
     const [delta, setDelta] = useState(100);
 
     useEffect(()=>{
@@ -60,9 +61,14 @@ function Presentation(){
             <h4>
                 <strong>Bem-vindo ao meu portifolio!</strong>
             </h4>
-
-            {/* <h1>Olá! Me chamo Darley e tenho 36 anos. </h1> */}
-            <h1>Olá! {text} </h1>
+            
+            <div>
+                {/* <h1>Olá! Me chamo Darley e tenho 36 anos. </h1> */}
+                {/* imagem={foto} */}
+                {/* <img src='../../Imagens/Fotos/darleyRosto.png' alt="erro"></img> */}
+                <img src={foto} alt="erro"></img>
+                <h1>Olá! {text} </h1>
+            </div>
 
             <p>
             Sou pai de dois filhos maravilhosos e sou apaixonado pelo mundo da tecnologia. 

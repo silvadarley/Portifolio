@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav'
 function Navbar(){
     return(
         <div className={styles.navbar}>
-            <ul>
+            <ul className={styles.link}>
                 <li>
                     <Nav.Link href='#Presentation'>
                         Apresentação
@@ -23,9 +23,9 @@ function Navbar(){
                         Projetos
                     </Nav.Link>
                 </li>
-            </ul>
+            </ul >
 
-            <ul>
+            <ul className={styles.icones}>
                 <li>
                     <a 
                         target='_blank' 

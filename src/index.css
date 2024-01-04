@@ -8,10 +8,25 @@ body {
   background-image: url('./Imagens/background.png');
   color: aliceblue;
   object-fit: cover;
-  background-size: 100%;
+  background-size: 100vw;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media(max-width:680px){
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url('./Imagens/background.png');
+    color: aliceblue;
+    object-fit: cover;
+    background-size: 100vw;
+  }
 }
