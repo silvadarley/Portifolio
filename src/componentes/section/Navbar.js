@@ -15,9 +15,9 @@ function Navbar(){
     return(
         <div className={styles.navbar}>
 
-            <div class="icones">
+            <div className="icones">
                 <!-- Ícone de hambúrguer -->
-                <div class="hamburguer" onclick="toggleNav()">&#9776;</div>
+                <div className="hamburguer" onclick="toggleNav()">&#9776;</div>
             </div>
         
             <ul className={styles.link}>
