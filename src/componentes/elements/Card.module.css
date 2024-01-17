@@ -1,31 +1,53 @@
-.card{
+.card {
     display: flex;
     justify-content: center;
 }
 
-.card img{
+.card img {
     height: 280px;
-    max-width: 400PX;
+    max-width: 100%; /* Faça a largura da imagem ser responsiva */
     margin: 1% 0% 5%;
     border-radius: 10px;
 }
 
-.card img:hover{
+.card img:hover {
     cursor: pointer;
     transform: translateY(5px);
     transition-duration: 0.5s;
 }
 
-.card section{
-    height: 260px;
-    width: 500px;
-    background-color: rgba(1,9, 28, 0.75);
+.card section {
+    max-width: 500px; /* Limita a largura da seção */
+    width: 100%; /* Faz a seção ocupar toda a largura disponível */
+    background-color: rgba(1, 9, 28, 0.75);
     border-radius: 20px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0.25, 0.25));
     padding: 20px;
     margin: 0 15px;
 }
 
-section h2{
+/* Adiciona uma margem inferior para melhor espaçamento entre as seções */
+.card section {
+    margin-bottom: 20px;
+}
+
+section h2 {
     font-size: 1.6em;
+}
+
+/* Aplica estilos diferentes para telas menores */
+@media screen and (max-width: 768px) {
+    .card {
+        flex-direction: column; /* Empilha os elementos verticalmente em telas menores */
+        align-items: center; /* Centraliza os itens na tela */
+    }
+
+    .card img {
+        max-width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner pai */
+    }
+
+    .card section {
+        width: 100%; /* Faz a seção ocupar toda a largura disponível */
+        margin: 15px 0; /* Adapta a margem vertical */
+    }
 }
