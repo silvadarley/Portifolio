@@ -51,8 +51,18 @@ function Navbar(){
                     </a>
                 </li>
             </ul>
+                            toggleNav();
         </div>
     )
+}
+
+function toggleNav() {
+    var x = document.querySelector(".navbar .link");
+    if (x.style.display === "flex") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "flex";
+    }
 }
 
 export default Navbar
