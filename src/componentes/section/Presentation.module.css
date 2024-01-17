@@ -37,35 +37,35 @@
 @media (max-width: 680px) {
     .Presentation div {
         display: flex;
-        flex-direction: column; /* Alterado de grid para column */
+        flex-direction: column;
         align-items: center;
         width: 70vw;
-        height: auto; /* Altura automática */
+        height: auto;
         margin-bottom: 15vh;
     }
 
     .Presentation div img {
         width: 40vw;
-        height: 20vh;
+        height: 40vw; /* Ajuste a altura para ser igual à largura */
         border-radius: 50%;
-        margin-left: 0; /* Alterado de 15% para 0 */
-        margin-bottom: 2%; /* Adicionado espaçamento inferior */
+        margin-left: 0;
+        margin-bottom: 2%;
         object-fit: cover;
     }
 
     .Presentation h1 {
         font-size: 2em;
-        width: 70vw; /* Ajuste na largura */
-        text-align: center; /* Centralizado */
+        width: 70vw;
+        text-align: center;
     }
 
     .Presentation h4 {
-        font-size: 20px; /* Voltando ao tamanho original */
+        font-size: 20px;
         text-align: justify;
     }
 
     .Presentation p {
         text-align: justify;
-        width: 70vw; /* Ajuste na largura */
+        width: 70vw;
     }
 }
