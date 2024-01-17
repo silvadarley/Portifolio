@@ -5,6 +5,12 @@ import Nav from 'react-bootstrap/Nav'
 function Navbar(){
     return(
         <div className={styles.navbar}>
+
+            <div class="icones">
+                <!-- Ícone de hambúrguer -->
+                <div class="hamburguer" onclick="toggleNav()">&#9776;</div>
+            </div>
+        
             <ul className={styles.link}>
                 <li>
                     <Nav.Link href='#Presentation'>
