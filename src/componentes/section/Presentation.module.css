@@ -13,7 +13,7 @@
 
 .Presentation div img {
     width: 10vw;
-    height: 20vh;
+    height: 10vw; /* Defina a altura igual à largura para criar um círculo */
     border-radius: 50%;
     margin-right: 2%;
     object-fit: cover;
