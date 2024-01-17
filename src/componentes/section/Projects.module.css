@@ -1,8 +1,19 @@
-.projects{
+.projects {
     text-align: justify;
     margin-left: 3%;
 }
 
-.projects h1{
+.projects h1 {
     font-size: 45px;
+}
+
+@media (max-width: 680px) {
+    .projects {
+        margin-left: 0;
+    }
+
+    .projects h1 {
+        font-size: 30px; /* Ajuste o tamanho da fonte para telas menores */
+        text-align: center; /* Centraliza o título em telas menores */
+    }
 }
