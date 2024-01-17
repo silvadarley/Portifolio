@@ -3,6 +3,15 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Nav from 'react-bootstrap/Nav'
 
 function Navbar(){
+    function toggleNav() {
+        var x = document.querySelector(".navbar .link");
+        if (x.style.display === "flex") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "flex";
+        }
+    }
+    
     return(
         <div className={styles.navbar}>
 
@@ -51,18 +60,11 @@ function Navbar(){
                     </a>
                 </li>
             </ul>
-                            toggleNav();
+                            
         </div>
     )
 }
 
-function toggleNav() {
-    var x = document.querySelector(".navbar .link");
-    if (x.style.display === "flex") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "flex";
-    }
-}
+
 
 export default Navbar
