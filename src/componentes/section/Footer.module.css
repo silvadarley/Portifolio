@@ -1,25 +1,38 @@
-.footer{
+.footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Empilha os elementos verticalmente em telas menores */
+    align-items: center; /* Centraliza os itens na tela */
     margin-top: 30px;
 }
 
-.footer ul{
+.footer ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-left: 2%;
-
+    margin: 0; /* Remova a margem para evitar espaçamento extra */
+    padding: 0; /* Remova o preenchimento para evitar espaçamento extra */
 }
 
-.footer li{
-    margin: 12%;
+.footer li {
+    margin: 12px; /* Reduzi a margem para espaçamento mais compacto */
 }
 
-.footer a{
-    color:aliceblue !important;
+.footer a {
+    color: aliceblue !important;
 }
 
-.footer p{
-    margin: 25px;
+.footer p {
+    margin: 15px 0; /* Ajusta a margem vertical */
+}
+
+/* Adaptação para telas menores */
+@media screen and (max-width: 768px) {
+    .footer ul {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .footer li {
+        margin: 8px; /* Reduz a margem para espaçamento mais compacto */
+    }
 }
